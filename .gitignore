@@ -100,3 +100,10 @@ hs_err_pid*
 .idea/.name
 build/resources/main/application.properties
 build/tmp/bootJar/MANIFEST.MF
+.gradle/5.6.3/executionHistory/executionHistory.bin
+.gradle/5.6.3/executionHistory/executionHistory.lock
+.gradle/5.6.3/fileHashes/fileHashes.bin
+.gradle/5.6.3/fileHashes/fileHashes.lock
+.gradle/5.6.3/javaCompile/classAnalysis.bin
+.gradle/5.6.3/javaCompile/javaCompile.lock
+.gradle/buildOutputCleanup/buildOutputCleanup.lock

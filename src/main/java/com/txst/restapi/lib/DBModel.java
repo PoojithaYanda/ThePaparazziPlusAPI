@@ -4,11 +4,11 @@ import java.sql.*;
 
 public class DBModel {
 
-	private Connection connection = null;
-	private Statement statement = null;
-	private PreparedStatement preparedStatement = null;
+	private static Connection connection = null;
+	private static Statement statement = null;
+	private static PreparedStatement preparedStatement = null;
 
-	protected Connection getConnection() throws Exception {
+	protected static Connection getConnection() throws Exception {
 		if (connection == null) {
 			Class.forName("com.mysql.jdbc.Driver");  
 			connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/paparazzi_db","root","password");  
@@ -16,13 +16,13 @@ public class DBModel {
 		return connection;
 	}
 
-	public ResultSet executeQuery(String queryString) throws Exception {
+	public static ResultSet executeQuery(String queryString) throws Exception {
 		statement = getConnection().createStatement();
 		ResultSet resultSet = statement.executeQuery(queryString);
 		return resultSet;
 	}
 
-	public void close() {
+	public static void close() {
 		try {
 			if (connection != null) {
 				connection.close();
