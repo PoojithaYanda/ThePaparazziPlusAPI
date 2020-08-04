@@ -37,7 +37,6 @@ public class ProjectController {
 
         project.createProject(projectName, customerName, customerEmail, date, userId);
         return project;
-
     }
 
 }

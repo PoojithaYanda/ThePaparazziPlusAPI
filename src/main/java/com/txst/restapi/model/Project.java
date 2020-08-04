@@ -69,7 +69,7 @@ public class Project extends DBModel {
                 resultSet.close();
             }
         } catch (Exception e) {
-            System.out.println("Exception while getting user : " + e);
+            System.out.println("Exception while getting project : " + e);
         } finally {
             close();
         }

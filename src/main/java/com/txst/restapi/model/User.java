@@ -85,6 +85,7 @@ public class User extends DBModel {
                 this.userId = resultSet.getInt(1);
                 this.userName = userName;
                 this.emailAddress = emailAddress;
+                this.errorMessage = "";
             } else {
                 System.out.println("Unable to create User");
                 return -1;
@@ -103,9 +104,12 @@ public class User extends DBModel {
         try{
             ResultSet resultSet = executeQuery(validateQuery);
             if(resultSet.next()){
+                System.out.println("Login validation is successful.");
+                this.userId = resultSet.getInt("User_id");
                 this.userName = resultSet.getString("Full_Name");
                 this.emailAddress= resultSet.getString("Email");
                 this.status = resultSet.getInt("Status");
+                this.errorMessage = "";
             } else
             {
                 this.setErrorMessage("Invalid User Name and Password");
