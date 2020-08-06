@@ -10,11 +10,11 @@ import java.util.List;
 
 public class Invoice extends DBModel {
 
-    private int invoiceId;
-    private int pId;
-    private String item_Name;
-    private double price;
-    private int quantity;
+    private int invoiceId = -1;
+    private int pId = -1;
+    private String item_Name = "";
+    private double price = -1;
+    private int quantity = -1 ;
 
     public int getinvoiceId() { return this.invoiceId; }
 

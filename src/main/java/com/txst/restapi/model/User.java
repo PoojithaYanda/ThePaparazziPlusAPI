@@ -8,11 +8,11 @@ import java.sql.Statement;
 
 public class User extends DBModel {
 
-    private int userId;
-    private String userName;
-    private String emailAddress;
+    private int userId = -1;
+    private String userName = "";
+    private String emailAddress = "";
     private int status = 1;
-    private String errorMessage;
+    private String errorMessage = "";
 
     public String getUserName() {
         return this.userName;

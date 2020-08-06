@@ -10,10 +10,10 @@ import java.util.List;
 
 public class Checklist extends DBModel {
 
-    private int cId;
-    private int pId;
-    private String item_Name;
-    private String date;
+    private int cId = -1;
+    private int pId = -1;
+    private String item_Name = "";
+    private String date = "";
 
     public int getcId() { return this.cId; }
 

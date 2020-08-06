@@ -11,12 +11,12 @@ import java.util.List;
 
 public class Project extends DBModel {
 
-    private int pId;
-    private int userId;
-    private String projectName;
-    private String customerName;
-    private String customerEmail;
-    private String date;
+    private int pId = -1;
+    private int userId = -1;
+    private String projectName = "";
+    private String customerName = "";
+    private String customerEmail = "";
+    private String date = "";
 
     public int getpId(){
         return this.pId;
@@ -106,7 +106,7 @@ public class Project extends DBModel {
             close();
         }
             return this.pId;
-        }
+    }
 
         public static List<Project> getProjects(int UserId){
         List<Project> projects = new ArrayList<>();
